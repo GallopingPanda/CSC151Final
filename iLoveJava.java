@@ -17,7 +17,7 @@ public static void randWords() {
 			
 	StringBuilder sb = new StringBuilder();
 		    String strLine = "";
-		    List<String> list = new ArrayList<String>();
+		    List<String> randWordList = new ArrayList<String>();
 		    try {
 		         BufferedReader br = new BufferedReader(new FileReader("C:/Users/hamrickr147/documents/randomwords.txt"));
 		          while (strLine != null)
@@ -28,9 +28,9 @@ public static void randWords() {
 		            strLine = br.readLine();
 		            if (strLine==null)
 		               break;
-		            list.add(strLine);
+		            randWordList.add(strLine);
 		        }
-		     System.out.println(Arrays.toString(list.toArray()));
+		     System.out.println(Arrays.toString(randWordList.toArray()));
 		         br.close();
 		    } catch (FileNotFoundException e) {
 		        System.err.println("File not found");
